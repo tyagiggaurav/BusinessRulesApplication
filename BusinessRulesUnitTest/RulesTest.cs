@@ -24,6 +24,16 @@ namespace BusinessRulesUnitTest
         }
 
         [TestMethod]
+        public void Test_ShouldNotUpdateSlip()
+        {
+            var rule = new CompositeRule(
+        new ActivateRule());
+            var book = new Book("book01", "CLRS");
+            IReadOnlyCollection<ICommand> commands = rule.Handle(book);
+            Assert.AreEqual(commands.Count, 0);
+        }
+
+        [TestMethod]
         public void TestActiveMembership()
         {
             var rule = new CompositeRule(
