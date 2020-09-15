@@ -31,12 +31,27 @@ namespace BusinessRules.Products
             SendIntimation(membership, true);
         }
 
+        public void UpgradeMembership(Membership membership)
+        {
+            if (membership.membershipType == MembershipTypes.Regular)
+            {
+                membership.membershipType = MembershipTypes.Premium;
+                SendIntimation(membership, false);
+
+            }
+        }
+
         void SendIntimation(Membership membership, bool isActivate)
         {
             if (isActivate)
             {
                 Console.WriteLine("Membership has been activated");
             }
+            else
+            {
+                Console.WriteLine("Membership has been updated");
+            }
+
         }
     }
 }

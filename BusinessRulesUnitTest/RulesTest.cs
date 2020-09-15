@@ -44,5 +44,16 @@ namespace BusinessRulesUnitTest
             Assert.AreEqual(true, membership.IsActive);
 
         }
+
+        [TestMethod]
+        public void TestUpgradeMembership()
+        {
+            var rule = new CompositeRule(
+        new UpgradeRule());
+            var membership = new Membership("regular", "regular membership");
+            Assert.AreEqual("Regular", membership.membershipType.ToString());
+            IReadOnlyCollection<ICommand> commands = rule.Handle(membership);
+            Assert.AreEqual("Premium", membership.membershipType.ToString());
+        }
     }
 }
