@@ -46,11 +46,11 @@ namespace BusinessRules.Products
         {
             if (isActivate)
             {
-                Console.WriteLine("Membership has been activated");
+                Console.WriteLine(membership.Name + " has been activated");
             }
             else
             {
-                Console.WriteLine("Membership has been updated");
+                Console.WriteLine(membership.Name + " has been updated");
             }
 
         }
