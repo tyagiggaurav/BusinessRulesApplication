@@ -7,7 +7,7 @@ namespace BusinessRulesUnitTest
     public class RulesTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestForBookProducts()
         {
         }
     }
