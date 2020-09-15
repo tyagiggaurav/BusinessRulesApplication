@@ -1,5 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using BusinessRules;
+using BusinessRules.Prodcuts;
+using BusinessRules.Rules;
+using BusinessRules.Commands;
 
 namespace BusinessRulesUnitTest
 {
@@ -9,6 +15,11 @@ namespace BusinessRulesUnitTest
         [TestMethod]
         public void TestForBookProducts()
         {
+            var rule = new CompositeRule(new SlipForShippingRule());
+            var book = new Book("book01", "CLRS");
+            IReadOnlyCollection<ICommand> commands = rule.Handle(book);
+            // Shall return 2 objects, for shipping and royality department
+            Assert.AreEqual(commands.Count, 2);
         }
     }
 }

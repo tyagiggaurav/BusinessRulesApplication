@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BusinessRules.Commands
 {
-    class SlipCommand : ICommand
+   public class SlipCommand : ICommand
     {
         readonly string operation;
         readonly IProduct product;

@@ -5,7 +5,7 @@ using System.Text;
 namespace BusinessRules.Rules
 {
 
-    class CompositeRule
+    public class CompositeRule
     {
         private readonly IRule[] rules;
         public CompositeRule(params IRule[] rules)

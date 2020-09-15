@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BusinessRules
 {
-    interface ICommand
+   public interface ICommand
     {
     }
 }

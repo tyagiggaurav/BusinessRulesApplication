@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BusinessRules;
 
 namespace BusinessRules.Rules
 {
-    class SlipForShippingRule
+   public class SlipForShippingRule:IRule
     {
     }
 }

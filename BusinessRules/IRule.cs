@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BusinessRules
 {
-    interface IRule
+    public interface IRule
     {
     }
 }
