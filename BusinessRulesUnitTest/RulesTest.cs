@@ -61,7 +61,7 @@ namespace BusinessRulesUnitTest
         {
             var rule = new CompositeRule(
        new PaymentCommissionRule());
-            var physicalProduct = new PhysicalProduct("video1", "video 1");
+            var physicalProduct = new PhysicalProduct("pp01", "computer");
             Assert.AreEqual(false, physicalProduct.isCommissionGenerated);
             IReadOnlyCollection<ICommand> commands = rule.Handle(physicalProduct);
             Assert.AreEqual(true, physicalProduct.isCommissionGenerated);
