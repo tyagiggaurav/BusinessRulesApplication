@@ -55,5 +55,12 @@ namespace BusinessRulesUnitTest
             IReadOnlyCollection<ICommand> commands = rule.Handle(membership);
             Assert.AreEqual("Premium", membership.membershipType.ToString());
         }
+
+        [TestMethod]
+        public void TestCommisionPayment()
+        {
+
+        }
+
     }
 }

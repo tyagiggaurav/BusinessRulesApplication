@@ -10,5 +10,7 @@ namespace BusinessRules
     {
         string Id { get;set; }
         string Name { get;set; }
+        bool isCommissionGenerated { get; set; }
+
     }
 }

@@ -13,5 +13,7 @@ namespace BusinessRules.Products
         }
         public string Name { get; set; }
         public string Id { get; set; }
+        public bool isCommissionGenerated { get; set; }
+
     }
 }
