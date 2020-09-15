@@ -16,6 +16,8 @@ namespace BusinessRules.Rules
         public IReadOnlyCollection<ICommand> Handle(IProduct product)
         {
             var commands = new List<ICommand>();
+            foreach (var rule in rules)
+                commands.AddRange(rule.Handle(product));
             return commands;
         }
     }

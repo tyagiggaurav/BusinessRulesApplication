@@ -6,5 +6,6 @@ namespace BusinessRules
 {
     public interface IRule
     {
+        IReadOnlyCollection<ICommand> Handle(IProduct product);
     }
 }

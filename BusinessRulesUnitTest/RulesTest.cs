@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BusinessRules;
-using BusinessRules.Prodcuts;
+using BusinessRules.Products;
 using BusinessRules.Rules;
 using BusinessRules.Commands;
 

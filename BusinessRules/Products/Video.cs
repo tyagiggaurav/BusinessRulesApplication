@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessRules.Products
 {
-   public class Book:IProduct
+    public class Video:IProduct
     {
-        public Book(string id,string name)
+        public Video(string id, string name)
         {
             Id = id;
             Name = name;
