@@ -6,5 +6,7 @@ namespace BusinessRules.Commands
 {
     class SlipCommand : ICommand
     {
+        readonly string operation;
+        readonly IProduct product;
     }
 }

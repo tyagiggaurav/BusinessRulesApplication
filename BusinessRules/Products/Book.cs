@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessRulesApplication
+namespace BusinessRules.Prodcuts
 {
    public class Book:IProduct
     {
-        
         public Book(string id,string name)
         {
             Id = id;
