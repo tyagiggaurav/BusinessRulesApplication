@@ -22,5 +22,17 @@ namespace BusinessRulesUnitTest
             // Shall return 2 objects, for shipping and royality department
             Assert.AreEqual(commands.Count, 2);
         }
+
+        [TestMethod]
+        public void TestActiveMembership()
+        {
+            var rule = new CompositeRule(
+        new ActivateRule());
+            var membership = new Membership("regular", "regular membership");
+            Assert.AreEqual(false, membership.IsActive);
+            IReadOnlyCollection<ICommand> commands = rule.Handle(membership);
+            Assert.AreEqual(true, membership.IsActive);
+
+        }
     }
 }

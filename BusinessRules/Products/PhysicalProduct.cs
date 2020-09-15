@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BusinessRules.Products
 {
-    public class PhysicalProduct:IProduct
+    public class PhysicalProduct : IProduct
     {
         public string Name { get; set; }
         public string Id { get; set; }
@@ -13,5 +13,8 @@ namespace BusinessRules.Products
             Id = id;
             Name = name;
         }
+
     }
+
+
 }

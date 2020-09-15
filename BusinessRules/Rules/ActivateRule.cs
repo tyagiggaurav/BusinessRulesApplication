@@ -6,14 +6,14 @@ using BusinessRules.Commands;
 
 namespace BusinessRules.Rules
 {
-   public class SlipForRoyaltyRule:IRule
+   public class ActivateRule:IRule
     {
         public IReadOnlyCollection<ICommand> Handle(IProduct product)
         {
-            if (product is Book)
-                return new[] { new SlipCommand("royalty program", product) };
+            var membership = product as Membership;
+            if (membership != null)
+                return new[] { new ActivateCommand(membership) };
             return new ICommand[0];
-
         }
     }
 }
